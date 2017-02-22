@@ -1,0 +1,2 @@
+# config
+A configuration component
