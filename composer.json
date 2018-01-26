@@ -15,7 +15,7 @@
     "require": {
         "php": ">= 5.4"
     },
-	"autoload": {
+    "autoload": {
         "psr-4": {
             "Moon\\Config\\": ""
         },
