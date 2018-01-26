@@ -1,9 +1,9 @@
 {
-    "name": "coco-soft/config",
+    "name": "heropoo/config",
 	"description": "A configuration component",
     "type": "library",
 	"keywords": [
-        "config", "configuration", "coco"
+        "config", "configuration"
     ],
     "authors": [
         {
@@ -12,11 +12,9 @@
         }
     ],
     "license": "MIT",
-    "minimum-stability": "stable",
-    "require": {},
 	"autoload": {
         "psr-4": {
-            "coco\\config\\": ""
+            "Moon\\Config\\": ""
         },
         "files":[
             "helpers.php"

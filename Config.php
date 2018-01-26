@@ -1,9 +1,9 @@
 <?php
-namespace coco\config;
+namespace Moon\Config;
 
 /**
  * Class Config
- * @package coco\config
+ * @package Moon\Config
  * @date 2017-2-10
  */
 class Config

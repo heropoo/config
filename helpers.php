@@ -5,10 +5,10 @@ if(!function_exists('config')){
      * get a config
      * @param string $key
      * @param bool $throw
-     * @return mixed|null
+     * @return mixed|null|\Moon\Config\Exception
      */
     function config($key, $throw = false){
-        return coco\config\Config::get($key, $throw);
+        return Moon\Config\Config::get($key, $throw);
     }
 }
 

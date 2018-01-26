@@ -6,7 +6,7 @@
  * Time: 10:32
  */
 
-namespace coco\config;
+namespace Moon\Config;
 
 
 class Exception extends \Exception

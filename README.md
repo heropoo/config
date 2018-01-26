@@ -5,7 +5,7 @@ A configuration component
 
 Install it via Composer:
 ```
-composer require coco-soft/config
+composer require heropoo/config
 
 ```
 
@@ -15,7 +15,7 @@ composer require coco-soft/config
 //require the composer autoload.php file
 
 
-use coco\config\Config;
+use Moon\Config\Config;
 
 //set config file path
 Config::setConfigDir('/path/to/config/dir');
