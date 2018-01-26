@@ -13,7 +13,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "php >= 5.3"
+        "php": ">= 5.4"
     },
 	"autoload": {
         "psr-4": {
