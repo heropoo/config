@@ -18,9 +18,6 @@
     "autoload": {
         "psr-4": {
             "Moon\\Config\\": ""
-        },
-        "files":[
-            "helpers.php"
-        ]
+        }
     }
 }
