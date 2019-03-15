@@ -6,30 +6,23 @@ A configuration component
 Install it via Composer:
 ```
 composer require heropoo/config
-
 ```
 
 ```php
 <?php
-
-//require the composer autoload.php file
-
+require_once './Config.php';
+require_once './Exception.php';
 
 use Moon\Config\Config;
 
-//set config file path
-Config::setConfigDir('/path/to/config/dir');
+$config = new Config('/path/to/config/dir');
 
 //if get charset in app.php return 
-$charset = Config::get('app.charset');
-
-//or use a helper function
-$charset = config('app.charset');
+$charset = $config->get('app.charset');
 
 // the second parameter is if throw a exception
 // when this config is not defined
-
-$charset = config('app.charset', true);
+$charset = $config->get('app.charset', true);
 ```
 
 
