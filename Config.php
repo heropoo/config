@@ -8,14 +8,14 @@ namespace Moon\Config;
  */
 class Config
 {
-    protected static $configDir;
+    protected $configFileDir;
 
-    public static function setConfigDir($dir)
+    public function __construct($configFileDir)
     {
-        if (!is_dir($dir)) {
-            throw new Exception('This config dir is invalided');
+        if (!is_dir($configFileDir)) {
+            throw new Exception('This config file dir `'.$configFileDir.'` is invalided');
         }
-        static::$configDir = realpath($dir);
+        $this->configFileDir = realpath($configFileDir);
     }
 
     /**
@@ -25,10 +25,10 @@ class Config
      * @return mixed|null
      * @throws Exception
      */
-    public static function get($key, $throw = false)
+    public function get($key, $throw = false)
     {
         $arr = explode('.', $key);
-        $configFile = static::$configDir . DIRECTORY_SEPARATOR . $arr[0] . '.php';
+        $configFile = $this->configFileDir . DIRECTORY_SEPARATOR . $arr[0] . '.php';
         if (!file_exists($configFile)) {
             if ($throw) {
                 throw new Exception("Config file `$configFile` is not exists");
@@ -51,7 +51,7 @@ class Config
                 $path .= '[' . $key . ']';
                 if (!isset($value[$key])) {
                     if ($throw) {
-                        throw new Exception("Offset `Array $path` is not defined in config file `$configFile`");
+                        throw new Exception("Offset `Array{$path}` is not defined in config file `$configFile`");
                     } else {
                         return null;
                     }
